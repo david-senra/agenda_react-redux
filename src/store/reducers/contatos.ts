@@ -18,12 +18,6 @@ const initialState: ContatosState = {
       nome: 'Luiza Azeredo Senra',
       email: 'luizasenra@gmail.com',
       telefone: '(31) 98312-8884'
-    },
-    {
-      id: 3,
-      nome: 'Bruno Vilaça',
-      email: 'brunovilaca@gmail.com',
-      telefone: '(31) 98867-1707'
     }
   ]
 }
