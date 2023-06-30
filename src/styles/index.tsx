@@ -142,6 +142,10 @@ export const BotaoCadastrar = styled(Botao)`
   width: 150px;
   font-size: 18px;
   margin-top: 30px;
+
+  &:hover {
+    background-color: ${Cores.corVerdeMaisEscura};
+  }
 `
 
 export const Campo = styled.input`
