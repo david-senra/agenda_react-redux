@@ -8,6 +8,10 @@ export type TituloType = {
   ativo: boolean
 }
 
+export type BotaoLinkType = {
+  pageActive: boolean
+}
+
 export type BotaoEditarCancelarType = {
   categoria: 'editar' | 'cancelar'
 }
@@ -55,7 +59,7 @@ export const Titulo = styled.h2<TituloType>`
   margin-bottom: 40px;
   font-size: 30px;
   font-weight: bold;
-  color: ${(props) => !props.ativo? Cores.corOito : Cores.corNove};
+  color: ${(props) => !props.ativo? Cores.corRosa : Cores.corVermelha};
 `
 
 export const TituloFormulario = styled.h2`
@@ -65,7 +69,7 @@ export const TituloFormulario = styled.h2`
   margin-bottom: 40px;
   font-size: 30px;
   font-weight: bold;
-  color: ${Cores.corOito};
+  color: ${Cores.corRosa};
 `
 
 export const Botao = styled.button`
@@ -75,39 +79,51 @@ export const Botao = styled.button`
   padding: 8px 12px;
   border: none;
   cursor: pointer;
-  background-color: ${Cores.corCinco};
+  background-color: ${Cores.corQuasePreta};
   border-radius: 8px;
   margin-right: 8px;
 `
 
-export const BotaoLink = styled(Link)`
+export const BotaoLink = styled(Link)<BotaoLinkType>`
   font-weight: bold;
   font-size: 18px;
   line-height: 28px;
-  color: #fff;
   padding: 8px 12px;
   border: none;
-  cursor: pointer;
+  cursor: ${(prop) => prop.pageActive? 'default' : 'pointer'};
   background-color: ${Cores.corAzulEscura};
   border-radius: 8px;
   margin-right: 8px;
   text-decoration: none;
+  color: ${(prop) => prop.pageActive? Cores.corDourada : Cores.corBranca};
 
   &:hover {
-    background-color: ${Cores.corAzulMaisEscura};
+    background-color: ${(prop) => prop.pageActive? Cores.corAzulEscura : Cores.corAzulMaisEscura};
   }
 `
 
 export const BotaoSalvar = styled(Botao)`
   background-color: ${Cores.corVerdeClara};
+
+  &:hover {
+    background-color: ${Cores.corVerdeMaisEscura};
+  }
 `
 
 export const BotaoEditarCancelar = styled(Botao)<BotaoEditarCancelarType>`
-  background-color: ${(prop) => prop.categoria == 'editar'? Cores.corQuatro : Cores.corDoze};
+  background-color: ${(prop) => prop.categoria == 'editar'? Cores.corCinzaC : Cores.corRosaClaro};
+
+  &:hover {
+    background-color: ${(prop) => prop.categoria == 'editar'? Cores.corCinzaB : Cores.corRosaClaroHov};
+  }
 `
 
 export const BotaoRemover = styled(Botao)<BotaoRemoverType>`
-  background-color: ${Cores.corNove};
+  background-color: ${Cores.corVermelha};
+
+  &:hover {
+    background-color: ${Cores.corVermelhaEscuro};
+  }
 `
 
 export const BotaoLink2 = styled(BotaoLink)`
@@ -133,8 +149,8 @@ export const Campo = styled.input`
   background-color: #fff;
   border-radius: 8px;
   font-weight: bold;
-  color: #666666;
-  border-color: #666666;
+  color: ${Cores.corCinzaA};
+  border-color: ${Cores.corCinzaA};
   width: 100%;
 `
 
@@ -143,8 +159,8 @@ export const Telefone = styled(InputMask)`
   background-color: #fff;
   border-radius: 8px;
   font-weight: bold;
-  color: #666666;
-  border-color: #666666;
+  color: ${Cores.corCinzaA};
+  border-color: ${Cores.corCinzaA};
   width: 100%;
 `
 

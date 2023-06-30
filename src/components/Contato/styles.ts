@@ -18,7 +18,7 @@ export const DivInput = styled.div`
   margin-bottom: 10px;
 
   label {
-    color: ${Cores.corTres};
+    color: ${Cores.corCinzaB};
     font-size: 16px;
   }
 `
@@ -29,7 +29,7 @@ export const Nome = styled.input<CustomInput>`
   margin-left: 10px;
   margin-right: 10px;
   width: 240px;
-  border: 2px solid #000;
+  border: 2px solid ${Cores.corPreta};
   border-radius: 4px;
   padding-left: 4px;
 
@@ -47,7 +47,7 @@ export const Email = styled.input<CustomInput>`
   margin-left: 2px;
   margin-right: 10px;
   width: 190px;
-  border: 2px solid #000;
+  border: 2px solid ${Cores.corPreta};
   border-radius: 4px;
   padding-left: 4px;
   margin-left: 4px;
@@ -68,7 +68,7 @@ export const Telefone = styled(InputMask)<CustomInput>`
   margin-right: 10px;
   width: 130px;
   padding-left: 4px;
-  border: 2px solid #000;
+  border: 2px solid ${Cores.corPreta};
   border-radius: 4px;
   margin-left: 4px;
 

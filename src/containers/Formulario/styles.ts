@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Cores } from '../../styles/variaveis'
 
 export const FormType = styled.form`
   width: 500px;
@@ -8,7 +9,7 @@ export const FormType = styled.form`
   margin: auto;
   font-weight: bold;
   font-size: 14px;
-  color: #666666;
+  color: ${Cores.corCinzaA};
   align-items: center;
 
 `
