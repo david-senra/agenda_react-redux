@@ -69,7 +69,7 @@ const Formulario = () => {
 
   return (
     <Container>
-      <TituloFormulario>Novo Cadastro</TituloFormulario>
+      <TituloFormulario>Novo Contato:</TituloFormulario>
       <S.FormType onSubmit={cadastrarContato}>
         <S.divForm>
           <label htmlFor={'campo-nome'}>Nome Completo:</label>
