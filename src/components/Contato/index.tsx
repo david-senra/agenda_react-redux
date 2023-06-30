@@ -24,6 +24,7 @@ const Contato = ({
   const [errorTelefone, setErrorTelefone] = useState(false)
   const dispatch = useDispatch()
   const todosBotoes = Array.from(document.getElementsByClassName('botaoCard') as HTMLCollectionOf<HTMLElement>)
+  const botoesCadastrar = Array.from(document.getElementsByClassName('botaoCadastrar') as HTMLCollectionOf<HTMLElement>)
 
   useEffect(() => {
     nomeOriginal.length > 0 && setNome(nomeOriginal)
@@ -41,6 +42,7 @@ const Contato = ({
     const inputDoMomento = document.getElementById(nome)
     if (estaEditandoNome == true) {
       todosBotoes.forEach((botao) => botao.style.visibility = "hidden")
+      botoesCadastrar.forEach((botao) => botao.style.visibility = "hidden")
       inputDoMomento?.focus()
       console.log(inputDoMomento?.parentElement)
       if (inputDoMomento !== null && inputDoMomento?.parentElement !== null && inputDoMomento?.parentElement?.parentElement !== null) {
@@ -49,6 +51,7 @@ const Contato = ({
     }
     else {
       todosBotoes.forEach((botao) => botao.style.visibility = "visible")
+      botoesCadastrar.forEach((botao) => botao.style.visibility = "visible")
       if (inputDoMomento !== null && inputDoMomento?.parentElement !== null && inputDoMomento?.parentElement?.parentElement !== null) {
         inputDoMomento.parentElement.parentElement.style.border = 'none'
       }
@@ -59,6 +62,7 @@ const Contato = ({
     const inputDoMomento = document.getElementById(email)
     if (estaEditandoEmail == true) {
       todosBotoes.forEach((botao) => botao.style.visibility = "hidden")
+      botoesCadastrar.forEach((botao) => botao.style.visibility = "hidden")
       inputDoMomento?.focus()
       console.log(inputDoMomento?.parentElement)
       if (inputDoMomento !== null && inputDoMomento?.parentElement !== null && inputDoMomento?.parentElement?.parentElement !== null) {
@@ -77,6 +81,7 @@ const Contato = ({
     const inputDoMomento = document.getElementById(telefone)
     if (estaEditandoTelefone == true) {
       todosBotoes.forEach((botao) => botao.style.visibility = "hidden")
+      botoesCadastrar.forEach((botao) => botao.style.visibility = "hidden")
       inputDoMomento?.focus()
       if (inputDoMomento !== null && inputDoMomento?.parentElement !== null && inputDoMomento?.parentElement?.parentElement !== null) {
         inputDoMomento.parentElement.parentElement.style.border = '3.5px solid orange'
@@ -242,7 +247,7 @@ const Contato = ({
             Editando...
           </S.TextoEditando>
         )}
-        <BotaoRemover className='botaoCard' categoria='remover' onClick={() => dispatch(remover(id))}>
+        <BotaoRemover className={'botaoCard'} categoria='remover' onClick={() => dispatch(remover(id))}>
           Remover
         </BotaoRemover>
       </S.BarraAcoes>

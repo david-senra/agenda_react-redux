@@ -16,12 +16,12 @@ const Header = ({
         (
           <>
             <BotaoLink pageActive={true} to="/">Exibir</BotaoLink>
-            <BotaoLink pageActive={false} to="/cadastro">Cadastrar</BotaoLink>
+            <BotaoLink className={'botaoCadastrar'} pageActive={false} to="/cadastro">Cadastrar</BotaoLink>
           </>
         ) : (
           <>
             <BotaoLink pageActive={false} to="/">Exibir</BotaoLink>
-            <BotaoLink pageActive={true} to="/cadastro">Cadastrar</BotaoLink>
+            <BotaoLink className={'botaoCadastrar'} pageActive={true} to="/cadastro">Cadastrar</BotaoLink>
           </>
         )
       }

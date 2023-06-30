@@ -36,7 +36,7 @@ const ListaDeContatos = () => {
           </S.CardTemplate>
         ))}
       </S.ListaCards>
-      <BotaoLink2 to={'/cadastro'}>Cadastrar novo contato</BotaoLink2>
+      <BotaoLink2 className={'botaoCadastrar'} pageActive={false} to={'/cadastro'}>Cadastrar novo contato</BotaoLink2>
     </Container>
   )
 }
