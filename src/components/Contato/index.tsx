@@ -71,6 +71,7 @@ const Contato = ({
     }
     else {
       todosBotoes.forEach((botao) => botao.style.visibility = "visible")
+      botoesCadastrar.forEach((botao) => botao.style.visibility = "visible")
       if (inputDoMomento !== null && inputDoMomento?.parentElement !== null && inputDoMomento?.parentElement?.parentElement !== null) {
         inputDoMomento.parentElement.parentElement.style.border = 'none'
       }
@@ -89,6 +90,7 @@ const Contato = ({
     }
     else {
       todosBotoes.forEach((botao) => botao.style.visibility = "visible")
+      botoesCadastrar.forEach((botao) => botao.style.visibility = "visible")
       if (inputDoMomento !== null && inputDoMomento?.parentElement !== null && inputDoMomento?.parentElement?.parentElement !== null) {
         inputDoMomento.parentElement.parentElement.style.border = 'none'
       }
