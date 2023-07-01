@@ -38,7 +38,7 @@ const EstiloGlobal = createGlobalStyle`
 
 export const Container = styled.div`
   max-width: 1024px;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   text-align: center;
   margin-bottom: 60px;
